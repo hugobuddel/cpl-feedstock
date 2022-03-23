@@ -10,7 +10,7 @@ source:
   sha256: 8bd6c4e14614408ee46f6c08192f2d53aa2d2e24129dda4fb7d826be65832199
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win or osx]
   run_exports:
     # The ABI doesn't seem to change for minor or patch release,
