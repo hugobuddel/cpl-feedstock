@@ -8,6 +8,8 @@ package:
 source:
   url: https://ftp.eso.org/pub/dfs/pipelines/libraries//{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 8bd6c4e14614408ee46f6c08192f2d53aa2d2e24129dda4fb7d826be65832199
+  patches:
+    - cfitsio_version.patch
 
 build:
   number: 1
@@ -29,6 +31,12 @@ requirements:
     - fftw
     - wcslib
   run:
+    # cpl has a check that it requires at least the cfitsio version was built against.
+    # Note that this isn't strictly necessary to add because cfitsio is pinned
+    # globally in conda-forge-pinning to x.x.x anyway, meaning you will automatically
+    # get the same cfitsio version at build and run time. But if cfitsio weren't
+    # pinned in conda-forge-pinning, the following pin would be needed.
+    - {{ pin_compatible('cfitsio', min_pin='x.x.x') }}
     # wcslib has no run_exports
     - wcslib
     # libcurl is not a direct dependency of CPL, but libtool links CPL to it because

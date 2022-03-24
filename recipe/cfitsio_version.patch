@@ -1,0 +1,18 @@
+cfitsio's MINOR version is divided by 100 and added to its MAJOR function
+in the float cpl_cfitsio_version_found since cfitsio 4.1.0.
+This fix only works if cfitsio's MINOR version is < 10.
+See https://github.com/conda-forge/cpl-feedstock/pull/2#issuecomment-1077411540
+
+diff --git a/configure b/configure
+index e175c04..dd10e15 100755
+--- a/configure.bak
++++ b/configure
+@@ -17983,7 +17983,7 @@ fi
+ then :
+   cpl_cfitsio_version_found="unknown"
+ else $as_nop
+-  cpl_cfitsio_version_found="$cpl_cfitsio_major.$cpl_cfitsio_minor"
++  cpl_cfitsio_version_found="$cpl_cfitsio_major.0$cpl_cfitsio_minor"
+ fi
+ 
+                 CFLAGS="$cpl_cfitsio_cflags_save"
