@@ -12,13 +12,13 @@ source:
     - cfitsio_version.patch
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win or osx]
   run_exports:
     # The ABI doesn't seem to change for minor or patch release,
     # https://abi-laboratory.pro/?view=timeline&l=cpl.
     # So we pin only major releases.
-    - {{ pin_compatible('cpl', max_pin='x') }}
+    - {{ pin_subpackage('cpl', max_pin='x') }}
 
 requirements:
   build:
