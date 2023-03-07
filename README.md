@@ -1,11 +1,11 @@
-About cpl
-=========
+About cpl-feedstock
+===================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cpl-feedstock/blob/main/LICENSE.txt)
 
 Home: https://www.eso.org/sci/software/cpl/
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cpl-feedstock/blob/main/LICENSE.txt)
 
 Summary: A software toolkit to develop astronomical data-reduction tasks
 
@@ -174,6 +174,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@drbixx](https://github.com/drbixx/)
 * [@hugobuddel](https://github.com/hugobuddel/)
 * [@teake](https://github.com/teake/)
 
