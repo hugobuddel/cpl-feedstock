@@ -1,5 +1,5 @@
 {% set name = "cpl" %}
-{% set version = "7.3.1" %}
+{% set version = "7.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://ftp.eso.org/pub/dfs/pipelines/libraries//{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 54546d763e7f75cb679f711c62bc962211328a35064edb6b9455e306458ebe15
+  sha256: a50c265a8630e61606567d153d3c70025aa958a28473a2411585b96894be7720
   patches:
     - cfitsio_version.patch
 
