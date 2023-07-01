@@ -29,7 +29,7 @@ requirements:
   host:
     - cfitsio
     - fftw
-    - wcslib
+    - wcslib==7.12
   run:
     # cpl has a check that it requires at least the cfitsio version was built against.
     # Note that this isn't strictly necessary to add because cfitsio is pinned
